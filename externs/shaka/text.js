@@ -394,6 +394,20 @@ shaka.extern.TextParser.prototype.parseInit = function(data) {};
 
 
 /**
+ * Parse a media segment and return the segment start time
+ *
+ * @param {!Uint8Array} data
+ *    The next section of buffer.
+ * @param {shaka.extern.TextParser.TimeContext} timeContext
+ *    The time information used to adjust the segment start time.
+ * @return {number}
+ *
+ * @exportDoc
+ */
+shaka.extern.TextParser.prototype.getSegmentStartTime
+    = function(data, timeContext) {};
+
+/**
  * Parse a media segment and return the cues that make up the segment.
  *
  * @param {!Uint8Array} data
